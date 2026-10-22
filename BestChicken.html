@@ -8,28 +8,61 @@
    <script defer src="https://cdn.jsdelivr.net/npm/alpinejs@3.x.x/dist/cdn.min.js"> </script>
    <style>
        /*The style section controls how pieces of your webpage look.*/
-   </style>
-</head>
+       body {
+        background-color: rgb(202, 221, 141);
+      }
+      h1 {
+        color: rgb(26, 53, 20);
+        text-align: center;
+        font-size: 55px;
+      }
+      ol {
+        font-family: verdana;
+        text-align: left;
+        font-size: 30px;
+        }
+      h2 {
+        font-family: Arial;
+        text-align: left;
+        font-size: 20px;
 
+      }
+        </style>
+        </head>
+        <body>
+          <h1>Best Chicken</h1>
+          <ol>
+            <li>Alive</li>
+            <li>Dead</li>
+            <li>Boiled</li>
+          </ol>
+          <h2>Choose one of the three options that fit in with your preferences the most</h2>
+        </style>
+      </head>
+  <!--w3schools was used to help with format/structure of lists-->
 
 <body>
 
-   <!--This is where the heading aswell as the questions, and the inputs/outputs will be.-->
-   <!--Question one will be asked then it will be followed by questions 2 and 3 if the user chooses the option  yes for an question then the rest will not be asked-->
+   <!--This is where inputs/outputs will be.-->
+   <!--The user chooses one of theree options ABC and output will vary based on their choice-->
   <!--The body section contains the content of your webpage.-->
-   <header>
-       
-   </header>
-
-
-        <div x-data="webApp">
-
-        </div>
+     <!-- Use the same x-model on each radio. -->
+     <!-- When error was made with line 51 Ai was used to help debug. -->
+     <div x-data="{ radioChoice: ''}"> 
+     <label>
+      <input type="radio" name="chicken" value="Alive" x-model="radioChoice"> Living Things
+    </label>
+    <label>
+      <input type="radio" name="chicken" value="Dead" x-model="radioChoice"> Taxidermy
+    </label>
+    <label>
+      <input type="radio" name="chicken" value="Boiled" x-model="radioChoice"> Chicken Nuggets
+    </label>
+    <p>The Best Chicken For You Is: <span x-text="radioChoice"></span></p>
+    </div>
+    <p>Fun Fact: Chicken comes from the animals called chickens!</p>
   
-   <footer>
-      
-      
-   </footer>
+ 
   
    <script>
 
